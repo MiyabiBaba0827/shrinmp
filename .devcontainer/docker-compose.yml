@@ -11,7 +11,7 @@ services:
       - PORT=3000
     volumes:
       - ../nodejs:/workspace/nodejs:cached
-      - /workspace/nodejs/node_modules
+      - node_modules_volume:/workspace/nodejs/node_modules
     networks:
       - nodejs-network
     stdin_open: true
@@ -20,4 +20,6 @@ services:
 networks:
   nodejs-network:
     driver: bridge
-  db-data:
+
+volumes:
+  node_modules_volume:
