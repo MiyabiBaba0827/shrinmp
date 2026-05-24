@@ -1,0 +1,12 @@
+{
+  "rest-client.environmentVariables": {
+    "$shared": {
+      "baseUrl": "http://localhost:3000",
+      "baseUrlHttps": "https://localhost:3443"
+    },
+    "local": {
+      "baseUrl": "http://localhost:3000",
+      "baseUrlHttps": "https://localhost:3443"
+    }
+  }
+}

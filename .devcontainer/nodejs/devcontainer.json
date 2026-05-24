@@ -1,0 +1,33 @@
+{
+  "name": "nodejs",
+  // "dockerFile": "Dockerfile",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "nodejs",
+  "workspaceFolder": "/workspace/nodejs",
+  "mounts": [
+    "source=${localWorkspaceFolder}/nodejs,target=/workspace/nodejs,type=bind,consistency=cached"
+  ],
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "humao.rest-client",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "ms-azuretools.vscode-docker",
+        "eamodio.gitlens",
+        "VisualStudioExptTeam.vscodeintellicode",
+        "orta.vscode-jest",
+        "editorconfig.editorconfig",
+        "streetsidesoftware.code-spell-checker",
+        "PKief.material-icon-theme",
+        "MS-CEINTL.vscode-language-pack-ja",
+        "redhat.vscode-yaml"
+      ]
+    }
+  },
+  "postCreateCommand": "npm install",
+  "remoteUser": "vscode"
+}
