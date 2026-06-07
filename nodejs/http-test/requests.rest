@@ -1,7 +1,6 @@
 ### REST Client for Node.js TypeScript App
 
 @baseUrl = http://localhost:3000
-@baseUrlHttps = https://localhost:3443
 
 ### Health Check
 GET {{baseUrl}}/health
@@ -16,18 +15,5 @@ Content-Type: application/json
 {
   "name": "Test",
   "message": "This is a test message",
-  "timestamp": "2026-05-23"
-}
-
-### HTTPS Health Check (requires certificate)
-GET {{baseUrlHttps}}/health
-
-### HTTPS POST Request (requires certificate)
-POST {{baseUrlHttps}}/test
-Content-Type: application/json
-
-{
-  "name": "HTTPS Test",
-  "message": "This is an HTTPS test message",
   "timestamp": "2026-05-23"
 }

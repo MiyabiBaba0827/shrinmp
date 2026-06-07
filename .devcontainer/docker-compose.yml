@@ -11,15 +11,14 @@ services:
       - PORT=3000
     volumes:
       - ../nodejs:/workspace/nodejs:cached
-      - node_modules_volume:/workspace/nodejs/node_modules
     networks:
       - nodejs-network
     stdin_open: true
     tty: true
+    user: vscode
 
 networks:
   nodejs-network:
     driver: bridge
 
-volumes:
-  node_modules_volume:
+volumes: {}
